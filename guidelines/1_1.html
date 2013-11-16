@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Accessibility Workshop</title>
+	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css"></link>
+    <link href="../prettify/prettify.css" rel="stylesheet" type="text/css"></link>
+    <link href="../prettify/bootstrap-prettify.css" rel="stylesheet" type="text/css"></link>
+	<style type="text/css">
+	  body {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	  }
+	  .sidebar-nav {
+		padding: 9px 0;
+	  }
+
+	  @media (max-width: 980px) {
+		/* Enable use of floated navbar text */
+		.navbar-text.pull-right {
+		  float: none;
+		  padding-left: 5px;
+		  padding-right: 5px;
+		}
+	  }
+	  .skipnav { text-align: left; }
+	  .skipnav a { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+	  .skipnav a:focus, .skipnav a:active { position: static; left: 0; width: auto; height: auto; overflow: visible; text-decoration: underline; }
+	</style>
+	<link rel="shortcut icon" href="../favicon.ico">
+</head>
+<body>
+	<div class="skipnav"><a href="#main_content">Skip to main content</a></div>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="../index.html">Accessibility Workshop</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Tutorial <a href="#" class="navbar-link">Companion Website</a>
+            </p>
+            <ul class="nav">
+              <li><a href="../index.html">Home</a></li>
+			  <li><a href="../agenda.html">Agenda</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+			  <li><a href="../tools.html">References</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Accessibility Introduction</li>
+              <li><a href="../others/inaccessible.html">Inaccessible Websites</a></li>
+              <li class="nav-header">Principle 1: Perceivable</li>
+              <li class="active"><a href="1_1.html">Guideline 1.1 Text Alternatives</a></li>
+              <li><a href="1_2.html">Guideline 1.2 Time-based Media</a></li>
+              <li><a href="1_3.html">Guideline 1.3 Adaptable</a></li>
+              <li><a href="1_4.html">Guideline 1.4 Distinguishable</a></li>
+              <li class="nav-header">Principle 2: Operable</li>
+              <li><a href="2_1.html">Guideline 2.1 Keyboard Accessible</a></li>
+              <li><a href="2_2.html">Guideline 2.2 Enough Time</a></li>
+              <li><a href="2_3.html">Guideline 2.3 Seizures</a></li>
+              <li><a href="2_4.html">Guideline 2.4 Navigable</a></li>
+              <li class="nav-header">Principle 3: Understandable</li>
+              <li><a href="3_1.html">Guideline 3.1 Readable</a></li>
+              <li><a href="3_2.html">Guideline 3.2 Predictable</a></li>
+              <li><a href="3_3.html">Guideline 3.3 Input Assistance</a></li>
+              <li class="nav-header">Principle 3: Understandable</li>
+              <li><a href="4_1.html">Guideline 4.1 Compatible</a></li>
+              <li class="nav-header">WAI-ARIA</li>
+              <li><a href="../others/html5.html">HTML5 Microformat</a></li>
+              <li><a href="../others/aria.html">ARIA Roles, States and Properties</a></li>
+              <li><a href="../others/js.html">Accessible Java Script</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div id="main_content" class="span9">
+			<h2>Guideline 1.1 Text Alternatives</h2>
+			<p class="lead"> Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language<p>
+			<h3>Links - alt text in href tag</h3>
+			<div class="tabbable"> <!-- Only required for left/right tabs -->
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab1" data-toggle="tab">Inaccessible Stuff</a></li>
+					<li><a href="#tab2" data-toggle="tab">How to make it Accessible</a></li>
+					<li><a href="#tab3" data-toggle="tab">Best Practices</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="tab1">						
+						<ul>
+						  <li>No alt text at all - <a href="http://www.licindia.in/" target="_blank">LIC India</a></li>
+						  <li>Irrelevant alt text : Look at alt text under "CONTACT US" image - <a href="http://www.licindia.in/ target="_blank"">LIC India</a></li>
+						  <li>Alt text for image when it is not required - spacer, horizontal and vertical line images etc. </li>
+						  <li>Using CSS for image display : Look at footer for payment options - <a href="http://www.snapdeal.com/" target="_blank">Snapdeal</a> </li>
+						</ul>
+					</div>
+					<div class="tab-pane" id="tab2">
+						Look at weather information at http://bbc.com or any other image
+						<pre  class="prettyprint lang-html">
+&lt;img alt="Sunny" title="Sunny" src="url" class="icon"&gt;
+						</pre>
+						Spacer are used properly at <a href="http://www.licindia.in/" target="_blank">LIC India</a>
+						<pre  class="prettyprint lang-html">
+&lt;img src="pages/spacer.gif" width="36" height="1" alt=""&gt;
+						</pre>
+					</div>
+					<div class="tab-pane" id="tab3">
+						<ol>
+						  <li>Always provide the descriptive and relevant text in alt tag</li>
+						  <li>Give alt="" for - utility images like spacer, horizontal and vertical line </li>
+						  <li>Use CSS to display images for specialise icons and logo only (Look for repeating behaviour). Avoid using CSS to display general images</li>
+						</ol>
+					</div>					
+				</div>
+			</div>
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; iAccessible 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../prettify/prettify.js" type="text/javascript" ></script>
+	<script>
+		(function(jQuery){	
+			jQuery( document ).ready( function() {
+				prettyPrint();
+			}); 
+		}(jQuery))
+	</script>
+</body>
+</html>
