@@ -86,10 +86,10 @@
           </div><!--/.well -->
         </div><!--/span-->
         <div id="main_content" class="span9">
-			<h2>Guideline 1.1 Text Alternatives</h2>
-			<p class="lead"> Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language<p>
+			<h2>Guideline 1.3 Adaptable</h2>
+			<p class="lead">Create content that can be presented in different ways (for example simpler layout) without losing information or structure.<p>
 			
-			<h3>1.1.1 Links - alt text in img tag</h3>
+			<h4>1.3.1 Information and Relationships conveyed through presentation are programmatically determined or available in text</h4>
 			<div class="tabbable"> <!-- Only required for left/right tabs -->
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#tab1_1" data-toggle="tab">Inaccessible Stuff</a></li>
@@ -98,26 +98,18 @@
 				<div class="tab-content">
 					<div class="tab-pane active" id="tab1_1">						
 						<ul>
-						  <li>No alt text at all - <a href="http://www.licindia.in/" target="_blank">LIC India</a></li>
-						  <li>Irrelevant alt text : Look at alt text under "CONTACT US" image - <a href="http://www.licindia.in/" target="_blank">LIC India</a></li>
-						  <li>Alt text for image when it is not required - spacer, horizontal and vertical line images etc. </li> <a href="../examples/1_1_1.htm" target="_blank"> Alt not required Example </a>
-						  <li>Using CSS for image display : Look at footer for payment options - <a href="http://www.snapdeal.com/" target="_blank">Snapdeal</a> </li>
-						</ul>
+						  <li><a href="../examples/1_3_1.html" target="_blank">Information Inaccessible Example</a></li>
+						 </ul>
 					</div>
 					<div class="tab-pane" id="tab1_2">
-						Look at weather information at http://bbc.com or any other image
-						<pre  class="prettyprint lang-html">
-&lt;img alt="Sunny" title="Sunny" src="url" class="icon"&gt;
-						</pre>
-						Spacer are used properly at <a href="http://www.licindia.in/" target="_blank">LIC India</a>
-						<pre  class="prettyprint lang-html">
-&lt;img src="pages/spacer.gif" width="36" height="1" alt=""&gt;
-						</pre>
+					<pre  class="prettyprint lang-html">
+&lt;strong&gt;special deals&lt;/strong&gt
+					</pre>
 					</div>				
 				</div>
 			</div>
 			
-			<h3>1.1.2 Labeling of controls</h3>
+			<h4>1.3.2 Sequential Information</h4>
 			<div class="tabbable"> <!-- Only required for left/right tabs -->
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#tab2_1" data-toggle="tab">Inaccessible Stuff</a></li>
@@ -126,18 +118,15 @@
 				<div class="tab-content">
 					<div class="tab-pane active" id="tab2_1">						
 						<ul>
-							<li> <a href="../examples/1_1_2.html" target = "_blank" > Inaccessible / Accessible Controls Example </a> </li>
+							<li><a href="../examples/1_3_2.html" target="_blank">Sequential Information Inaccessible Example</a></li>
 						</ul>
 					</div>
 					<div class="tab-pane" id="tab2_2">
-						<pre  class="prettyprint lang-html">
-&lt;label for="mr"&gt;Mr. &lt;input type="radio" name="t" id="mr" value="mr" title="title"&gt;&lt;/label&gt;
-						</pre>
 					</div>
 				</div>
 			</div>
-			
-			<h3>1.1.3 CAPTCHA</h3>
+		
+			<h4>1.3.3 Size, Shape and Location are not the only ways that meaning is conveyed</h4>
 			<div class="tabbable"> <!-- Only required for left/right tabs -->
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#tab3_1" data-toggle="tab">Inaccessible Stuff</a></li>
@@ -146,23 +135,12 @@
 				<div class="tab-content">
 					<div class="tab-pane active" id="tab3_1">						
 						<ul>
-							<li> <a href="www.irctc.co.in" target = "_blank" > Indian Railways Website </a> </li>
+							<li><a href="../examples/1_3_3.html" target="_blank">Location Inaccessible Example</a></li>
 						</ul>
 					</div>
 					<div class="tab-pane" id="tab3_2">
 						<ul>
-							<li>Math Puzzle</li>
-								<ul>
-									<li>What is 2 + 4 = ?</li>
-								</ul>
-							<li>Trivia Puzzle</li>
-								<ul>
-									<li>What is the color of sky?</li>
-								</ul>
-							<li>SMS Verification</li>
-								<ul>
-									<li>Send an SMS for verification similar to Google or Facebook</li>
-								</ul>
+							<li><a href="../examples/1_3_3_success.html" target="_blank">Location Accessible Example</a></li>
 						</ul>
 					</div>
 				</div>
