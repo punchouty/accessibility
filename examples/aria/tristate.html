@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Tristate Check box</title>
+		<link rel="shortcut icon" href="../../favicon.ico">
+		<style type="text/css">
+			label { font-size:2em;margin:15px;position:relative;top:-8px;}
+			input {border:2px solid transparent;}
+			input:focus{border:2px solid #00ff00;;}
+			
+		</style>
+	</head>
+	<body>
+		<h2>Working Example</h2>
+		<div id="example">
+			<label for="checkTest" id="test">choose a state</label>
+			<input type="image" src="unchecked.gif" alt="choose a state" id="checkTest">
+		</div>
+		
+		<script>
+			window.onload = init;
+			function init()
+			{
+				var objCheck=document.getElementById('checkTest');
+				objCheck.setAttribute('role','checkbox');
+				objCheck.setAttribute('aria-checked','false');
+			objCheck.onclick = function()
+			{
+				return doCheck(objCheck);
+			};
+			}
+			function doCheck(objCheck)
+			{
+				var currentvalue = objCheck.getAttribute('aria-checked');
+				switch(currentvalue)
+				{
+					case 'false':
+					objCheck.setAttribute('src', 'mixed.gif');
+					objCheck.setAttribute('aria-checked', 'mixed');
+					break;
+					case 'mixed':
+					objCheck.setAttribute('src', 'checked.gif');
+					objCheck.setAttribute('aria-checked', 'true');
+					break;
+					case 'true':
+					objCheck.setAttribute('src', 'unchecked.gif');
+					objCheck.setAttribute('aria-checked', 'false');
+				}
+				return true;
+			}
+		</script>
+	</body>
+</html>

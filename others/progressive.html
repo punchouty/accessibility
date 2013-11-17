@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Java Script and Accessibility</title>
+	<title>HTML 5 Accessibility Features</title>
 	<link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../prettify/prettify.css" rel="stylesheet" type="text/css"></link>
+    <link href="../prettify/bootstrap-prettify.css" rel="stylesheet" type="text/css"></link>
 	<style type="text/css">
 	  body {
 		padding-top: 60px;
@@ -21,9 +23,6 @@
 		  padding-right: 5px;
 		}
 	  }
-	  #example {border:1px solid #000000; padding:1em;background-color:#f5f5f5}
-	  input {border:2px solid transparent;}
-	  input:focus{border:2px solid #00ff00;;}
 	  .skipnav { text-align: left; }
 	  .skipnav a { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 	  .skipnav a:focus, .skipnav a:active { position: static; left: 0; width: auto; height: auto; overflow: visible; text-decoration: underline; }
@@ -80,23 +79,57 @@
               <li class="nav-header">Principle 4: Understandable</li>
               <li><a href="../guidelines/4_1.html">Guideline 4.1 Compatible</a></li>
               <li class="nav-header">WAI-ARIA</li>
+              <li class="active"><a href="../others/progressive.html">Progressive Enhancements</a></li>
               <li><a href="../others/html5.html">HTML5 Semantics</a></li>
               <li><a href="../others/aria.html">ARIA Roles, States and Properties</a></li>
-              <li class="active"><a href="../others/js.html">Accessible Java Script</a></li>
+              <li><a href="../others/js.html">Accessible Java Script</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div id="main_content" class="span9">
-			<h2>Accessible Java Script Components</h2>
-			<p class="lead"> Technical Solutions to Advance Java Script Components<p>
+			<h2>Progressive Enhancement</h2>
+			<p class="lead">Web site should make basic content available to everyone while more advanced content and functionality will be accessible to those with more capability<p>
 			
-			<h3>ARIA Tristate check box</h3>
-			<div id="checkbox-example">
-				<form>
-					<label for="checkTest" id="test">choose a state</label>
-					<input type="image" src="unchecked.gif" alt="choose a state" id="checkTest">
-				</form>
-			</div>
+			<h3>Browser Incompatibilities</h3>
+			<p>Use <a href="http://modernizr.com/">modernizr.js</a> to identify browser support and features. It will help applying <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">pollyfills</a> to support cross browser support
+			</p>
+			<pre  class="prettyprint">
+// Give Modernizr.load a string, an object, or an array of strings and objects
+Modernizr.load([
+  // Presentational polyfills
+  {
+    // Logical list of things we would normally need
+    test : Modernizr.fontface && Modernizr.canvas && Modernizr.cssgradients,
+    // Modernizr.load loads css and javascript by default
+    nope : ['presentational-polyfill.js', 'presentational.css']
+  },
+  // Functional polyfills
+  {
+    // This just has to be truthy
+    test : Modernizr.websockets && window.JSON,
+    // socket-io.js and json2.js
+    nope : 'functional-polyfills.js',
+    // You can also give arrays of resources to load.
+    both : [ 'app.js', 'extra.js' ],
+    complete : function () {
+      // Run this after everything in this group has downloaded
+      // and executed, as well everything in all previous groups
+      myApp.init();
+    }
+  },
+  // Run your analytics after you've already kicked off all the rest
+  // of your app.
+  'post-analytics.js'
+]);
+			</pre>
+			<h3>Internet Explorer Issues</h3>
+			<p>Use <a href="http://modernizr.com/">html5shiv</a> to resolve issues related to IE 8 and its earlier version 
+			</p>
+			<pre  class="prettyprint lang-html">
+&lt;!--[if lt IE 9]&gt;
+&lt;script src="dist/html5shiv.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+			</pre>
         </div><!--/span-->
       </div><!--/row-->
 
@@ -111,39 +144,15 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.js"></script>
+    <script src="../prettify/prettify.js" type="text/javascript" ></script>
 	<script>
-		window.onload = init;
-		function init()
-		{
-			var objCheck=document.getElementById('checkTest');
-			objCheck.setAttribute('role','checkbox');
-			objCheck.setAttribute('aria-checked','false');
-			objCheck.onclick = function()
-			{
-				return doCheck(objCheck);
-			};
-		}
-		function doCheck(objCheck)
-		{
-			var currentvalue = objCheck.getAttribute('aria-checked');
-			switch(currentvalue)
-			{
-				case 'false':
-					objCheck.setAttribute('src', 'mixed.gif');
-					objCheck.setAttribute('aria-checked', 'mixed');
-					break;
-				case 'mixed':
-					objCheck.setAttribute('src', 'checked.gif');
-					objCheck.setAttribute('aria-checked', 'true');
-					break;
-				case 'true':
-					objCheck.setAttribute('src', 'unchecked.gif');
-					objCheck.setAttribute('aria-checked', 'false');
-			}
-			return true;
-		}
+		(function(jQuery){	
+			jQuery( document ).ready( function() {
+				prettyPrint();
+			}); 
+		}(jQuery))
 	</script>
 </body>
 </html>
