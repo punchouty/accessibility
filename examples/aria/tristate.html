@@ -20,21 +20,17 @@
 		
 		<script>
 			window.onload = init;
-			function init()
-			{
+			function init()	{
 				var objCheck=document.getElementById('checkTest');
 				objCheck.setAttribute('role','checkbox');
 				objCheck.setAttribute('aria-checked','false');
-			objCheck.onclick = function()
-			{
-				return doCheck(objCheck);
-			};
+				objCheck.onclick = function() {
+					return doCheck(objCheck);
+				};
 			}
-			function doCheck(objCheck)
-			{
+			function doCheck(objCheck) {
 				var currentvalue = objCheck.getAttribute('aria-checked');
-				switch(currentvalue)
-				{
+				switch(currentvalue) {
 					case 'false':
 					objCheck.setAttribute('src', 'mixed.gif');
 					objCheck.setAttribute('aria-checked', 'mixed');
