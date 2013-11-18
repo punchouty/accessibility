@@ -87,98 +87,55 @@
           </div><!--/.well -->
         </div><!--/span-->
         <div id="main_content" class="span9">
-			<h2>Guideline 1.4 Distinguishable</h2>
-			<p class="lead">Create content that can be presented in different ways (for example simpler layout) without losing information or structure.<p>
+			<h2>Guideline 3.2 Predictable </h2>
+			<p class="lead"> Make Web pages appear and operate in predictable ways.<p>
 			
-			<h4>1.4.1 Meaning should not depend exclusively on color</h4>
+			<h4>3.2.1 On Focus : When any component receives focus, it does not initiate a change of context. </h4>
 			<div class="tabbable"> <!-- Only required for left/right tabs -->
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#tab1_1" data-toggle="tab">Inaccessible Stuff</a></li>
-					<li><a href="#tab1_2" data-toggle="tab">How to make it Accessible</a></li>
+					<li><a href="#tab1_1" data-toggle="tab">Inaccessible stuff</a></li>
+					
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane active" id="tab1_1">						
-						<ul>
-						  <li><a href="../examples/1_4_1.html" target="_blank">Information Inaccessible Color Example</a></li>
-						 </ul>
-					</div>
-					<div class="tab-pane" id="tab1_2">
-						<ul>
-							<li>Provide descriptions, alt text </li>
-						</ul>
-					</div>				
+					<div class="tab-pane active" id="tab1_1">
+						
+						<p>Example Failure 1</p>
+						<pre  class="prettyprint lang-html">
+&lt;form method="get" id="form1"&gt;
+  &lt;input type="text" name="text1" size="3" maxlength="3"&gt; - 
+  &lt;input type="text" name="text2" size="3" maxlength="3"&gt; - 
+  &lt;input type="text" name="text3" size="4" maxlength="4" onchange="form1.submit();"&gt;
+&lt;/form&gt; 
+						</pre>
+						
+						<p>Example Failure 2</p>
+						<pre  class="prettyprint lang-html">
+&lt;form method="get" id="form2"&gt;
+ &lt;input type="text" name="text1"&gt;
+  &lt;select name="select1" onchange="form2.submit();"&gt;
+    &lt;option&gt;one&lt;/option&gt;
+    &lt;option&gt;two&lt;/option&gt;
+    &lt;option&gt;three&lt;/option&gt;
+    &lt;option&gt;four&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/form&gt; 
+						</pre>
+						<p>Example Failure 3</p>
+						<a href="http://www.bjp.org" target="_blank"> BJP </a>
+					</div>	
 				</div>
 			</div>
 			
-			<h4>1.4.2 Audio can be controlled by a user</h4>
+			<h4>3.2.2 Definitions of unusual words, phrases, idioms, jargon and abbreviations are available</h4>
 			<div class="tabbable"> <!-- Only required for left/right tabs -->
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#tab2_1" data-toggle="tab">Inaccessible Stuff</a></li>
-					<li><a href="#tab2_2" data-toggle="tab">How to make it Accessible</a></li>
+					<li><a href="#tab2_1" data-toggle="tab">How to make it Accessible</a></li>
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane active" id="tab2_1">						
 						<ul>
-							<li><a href="../examples/1_3_2.html" target="_blank">Sequential Information Inaccessible Example</a></li>
-						</ul>
-					</div>
-					<div class="tab-pane" id="tab2_2">
-					</div>
-				</div>
-			</div>
-		
-			<h4>1.4.3 Text contrasts with its background at a 5:1 ratio or 7:1</h4>
-			<div class="tabbable"> <!-- Only required for left/right tabs -->
-				<ul class="nav nav-tabs">
-					<li class="active"><a href="#tab3_1" data-toggle="tab">Inaccessible Stuff</a></li>
-					<li><a href="#tab3_2" data-toggle="tab">How to make it Accessible</a></li>
-				</ul>
-				<div class="tab-content">
-					<div class="tab-pane active" id="tab3_1">						
-						<ul>
-							<li><a href="../examples/1_3_3.html" target="_blank">Location Inaccessible Example</a></li>
-						</ul>
-					</div>
-					<div class="tab-pane" id="tab3_2">
-						<ul>
-							<li><a href="../examples/1_3_3_success.html" target="_blank">Location Accessible Example</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<h4>1.4.4 Text can be resized from -50% to 200% without loosing content</h4>
-			<div class="tabbable"> <!-- Only required for left/right tabs -->
-				<ul class="nav nav-tabs">
-					<li class="active"><a href="#tab4_1" data-toggle="tab">Inaccessible Stuff</a></li>
-					<li><a href="#tab4_2" data-toggle="tab">How to make it Accessible</a></li>
-				</ul>
-				<div class="tab-content">
-					<div class="tab-pane active" id="tab4_1">						
-						<ul>
-							<li>Example not available</li>
-						</ul>
-					</div>
-					<div class="tab-pane" id="tab4_2">
-						<ul>
-							<li><a href="www.passport.gov.in" target="_blank">Passport India</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<h4>1.4.5 Background audio does not distract from foreground audio</h4>
-			<div class="tabbable"> <!-- Only required for left/right tabs -->
-				<ul class="nav nav-tabs">
-					<li class="active"><a href="#tab5_1" data-toggle="tab">Inaccessible Stuff</a></li>
-					<li><a href="#tab5_2" data-toggle="tab">How to make it Accessible</a></li>
-				</ul>
-				<div class="tab-content">
-					<div class="tab-pane active" id="tab5_1">						
-						
-					</div>
-					<div class="tab-pane" id="tab5_2">
-					
+						  <li><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-idioms.html" target="_blank">WCAG 2.0</a></li>
+						 </ul>
 					</div>
 				</div>
 			</div>
