@@ -90,22 +90,28 @@
 			<h2>Guideline 4.1 Compatible</h2>
 			<p class="lead">Maximize compatibility with current and future user agents, including assistive technologies.<p>
 						
-			<h4>Manual Testing</h4>
-			<p>There is no alternative to manual testing.</p>
-			<ul>
-				<li>Use keyboard as input device to catch keyboard traps, focus issues, fly out menus issues. Try it - <a href="http://www.bjp.org/">BJP Website</a></li>
-				<li>Turn off the images - In IE Go to Internet Options > Advanced > Multimedia > Show pictures OFF</li>
-				<li>Take feedback from disabled user</li>
-				<li>Use screen reader like NVDA to test. Use "speech viewer" - Tools > Speech Viewer </li>
-			</ul>
+			<h3>Testing Tools</h3>
+			
 			<h4>XHTML Validation</h4>
-			<p>Firefox addon XHTML testing <a href="https://addons.mozilla.org/en-US/firefox/addon/html-validator/" target="_blank">HTML Validator</a></p>
+			<p>Firefox addon XHTML testing 	<a href="https://addons.mozilla.org/en-US/firefox/addon/html-validator/" target="_blank">HTML Validator</a></p>
+			<p>Example : Visually Good but	<a href="../wrong_index.html" target="_blank">Inaccessible Web page</a></p>
 			
 			<h4>WAVE Toolbar</h4>
 			<p>Firefox addon accessibility testing <a href="http://wave.webaim.org/toolbar/" target="_blank">WAVE Toolbar</a></p>
 			
 			<h4>Colour Contrast Analyser</h4>
 			<p>Online <a href="http://snook.ca/technical/colour_contrast/colour.html" target="_blank">Colour Contrast Check</a></p>
+			
+			<h4>Manual Testing</h4>
+			<p>There is no alternative to manual testing.</p>
+			<ul>
+				<li>Testing tools cannot tell context of element. Any wrong alt text can easily pass automation testing.</a></li>
+				<li>Error identification - color changes cannot be determined by automation</a></li>
+				<li>Use keyboard as input device to catch keyboard traps, focus issues, fly out menus issues. Try it - <a href="http://www.bjp.org/">BJP Website</a></li>
+				<li>Turn off the images - In IE Go to Internet Options > Advanced > Multimedia > Show pictures OFF</li>
+				<li>Take feedback from disabled user</li>
+				<li>Use screen reader like NVDA to test. Use "speech viewer" - Tools > Speech Viewer </li>
+			</ul>
 			
         </div><!--/span-->
       </div><!--/row-->

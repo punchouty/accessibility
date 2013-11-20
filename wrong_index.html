@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
 	<meta charset="utf-8">
-	<title>Accessibility Workshop - Reference Tools</title>
+	<title>Welcome to Accessibility Workshop</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<style type="text/css">
 	  body {
@@ -26,10 +24,9 @@
 	  .skipnav a:focus, .skipnav a:active { position: static; left: 0; width: auto; height: auto; overflow: visible; text-decoration: underline; }
 	</style>
 	<link rel="shortcut icon" href="favicon.ico">
-</head>
-<body>
+	
 	<div class="skipnav"><a href="#main_content">Skip to main content</a></div>
-	<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="navbar-inner">
         <div class="container-fluid">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -37,16 +34,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="index.html">Accessibility Workshop</a>
+          <a class="brand" href="#">Accessibility Workshop</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Tutorial Companion Website
             </p>
             <ul class="nav">
-              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="index.html">Home</a></li>
 			  <li><a href="agenda.html">Agenda</a></li>
               <li><a href="contact.html">Contact</a></li>
-			  <li class="active"><a href="tools.html">References</a></li>
+			  <li><a href="tools.html">References</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -84,47 +81,42 @@
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
-        <div id="main_content" class="span9">
-			<h1>References</h1>
-			<p>Important Tools and Other important links for Accessibility Workshop</p>
-			<h3>Tools</h3>
-			<ul>
-				<li>NVDA Screen Reader <a href="http://www.nvaccess.org/" target="_blank">NVDA</a></li>
-				<li>JAWS Screen Reader <a href="http://www.freedomscientific.com/products/fs/jaws-product-page.asp" target="_blank">JAWS</a></li>
-				<li>HTML 5 Accessibility <a href="http://www.html5accessibility.com/" target="_blank">Browser Support</a></li>
-				<li><a href="http://caniuse.com/" target="_blank">Can i use</a> HTML 5 feature for my Browser</li>
-				<li>Firefox addon accessibility testing <a href="http://wave.webaim.org/toolbar/" target="_blank">WAVE Toolbar</a></li>
-				<li>Firefox addon XHTML testing<a href="https://addons.mozilla.org/en-US/firefox/addon/html-validator/" target="_blank">HTML Validator</a></li>
-				<li>Online tool to <a href="http://snook.ca/technical/colour_contrast/colour.html" target="_blank">Check Contrast Ratio</a></li>
-				<li>IE issues <a href="https://code.google.com/p/html5shiv/" target="_blank">Shiv or Shim scripts</a></li>
-				<li>HTML 5 Feature Detection <a href="http://modernizr.com/" target="_blank">Modernizr</a></li>
-			</ul>
-			<h3>ARIA friendly Java Script Framework and Components</h3>
-			<ul>
-				<li>JQuery UI <a href="http://jqueryui.com/" target="_blank">JQuery UI</a></li>
-				<li>ARIA Compliant JQuery UI <a href="http://hanshillen.github.io/jqtest/" target="_blank">ARIA JQuery UI</a></li>
-				<li>Dojo <a href="http://dojotoolkit.org/" target="_blank">Dojo Toolkit</a></li>
-				<li>Toolkit from Yahoo<a href="http://yuilibrary.com/" target="_blank">YUI</a></li>
-				<li>Twitter Bootstrap <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3.0</a></li>
-				<li>Toolkit from Yahoo<a href="http://filamentgroup.com/examples/jqueryui-visualize/" target="_blank">Accessible Charts</a></li>
-			</ul>
-			<h3>Other References</h3>
-			<ul>
-				<li>WCAG 2.0 <a href="http://www.w3.org/TR/WCAG20/" target="_blank">WCAG 2.0 Home Page</a></li>
-				<li>WAI ARIA <a href="http://www.w3.org/WAI/intro/aria" target="_blank">WAI ARIA Home Page</a></li>
-				<li>An introduction to using WAI-ARIA to enable Web 2.0 accessibility <a href="http://www-03.ibm.com/able/resources/wai_aria_intro.html" target="_blank">IBM</a></li>
-				<li>Mozilla Developer Network ARIA <a href="https://developer.mozilla.org/en-US/docs/Accessibility/ARIA" target="_blank">Getting Started with ARIA</a></li>
-				<li>Real world Accessibility <a href="http://www.sitepoint.com/real-world-accessibility-html5-aria-and-the-modern-web/" target="_blank">Real world Accessibility</a></li>
-				<li>Resources at Illinois Center for Information Technology and Web Accessibility <a href="http://test.cita.illinois.edu/aria/" target="_blank">ARIA Examples</a></li>
-				<li>Hands on examples <a href="http://webaim.org/articles/" target="_blank">Web AIM</a></li>
-				<li>Best Practices <a href="http://www.websemantics.co.uk/tutorials/accessible_forms/" target="_blank">Accessible Forms</a></li>
-				<li>A LIST PART <a href="http://alistapart.com/article/waiaria" target="_blank">Accessible Web 2.0</a></li>
-				<li>HTML 5 Accessibility <a href="http://www.clarissapeterson.com/2012/11/html5-accessibility/" target="_blank">HTML 5 Accessibility</a></li>
-				<li>Accessibility at MSDN <a href="http://msdn.microsoft.com/en-us/magazine/jj863135.aspx" target="_blank">Accessibility MSDN</a></li>
-			</ul>
-        </div><!--/span-->
-      </div><!--/row-->
-
+        <div id="main_content" class="span9" role="main">
+          <div class="hero-unit">
+            <h1>Accessibility Workshop</h1>
+            <p>Created specifically for Web Designers and Developers, this two days hands-on workshop covers the What, Why, and How of Web 2.0 accessibility. It covers WCAG 2.0 guidelines and standards, WAI-ARIA specifications and practices along with HTML5 accessibility features in depth.</p>
+            <p><a href="agenda.html" class="btn btn-primary btn-large">Agenda &raquo;</a></p>
+          </div>
+          <div class="row-fluid">
+            <div class="span4">
+              <h2>What is Accessibility?</h2>
+              <p>Explain what are some common types of disabilities. Describe various adaptive technologies that enable people with disabilities to access computers and the Internet. Finally, cover the different kinds of problems with rich Internet applications that hinder the use of such adaptive technologies. </p>
+            </div>
+            <div class="span4">
+              <h2>WCAG 2.0 Standards</h2>
+              <p>Explain the W3C accessibility guidelines covering Principles, Guidelines, Success Criteria, Sufficient and Advisory Techniques in an easy to follow course with plenty of examples</p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>WAI-ARIA</h2>
+              <p>WAI-ARIA, the Accessible Rich Internet Applications Suite, helps provide accessibility for users of adaptive technologies with dynamic content and advanced user interface controls developed with Ajax, HTML, JavaScript, and related technologies. We teach how to comply with these standards.</p>
+              <!-- <p><a class="btn" href="#">View details &raquo;</a></p> -->
+            </div><!--/span-->
+          </div><!--/row-->
+		  <div class="row-fluid">
+            <div class="span4">
+              <h2>HTML 5</h2>
+              <p>Introduction to HTML 5 along with its features that make websites more accessible. Learn new tags for page layouts, micro formats and many more.</p>
+            </div><!--/span-->
+			<div class="span4">
+			  <h2>Accessibility Testing Tools</h2>
+			  <p>Cover several automated tools that help in the process of identifying accessibility problems. Hand-on exercises to identify and fix accessibility problems in existing Web applications.</p>
+            </div>
+			<div class="span4">
+			  <h2>Accessible Java Script</h2>
+			  <p>Learn how to write accessible Java Script components. Introduction to free open source UI tool-kit like JQuery UI and its accessibility features.</p>
+            </div>
+		  </div><!--/row-->
+	  </div>
       <hr>
 
       <footer>
