@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<title>ARIA Roles, Properties and States</title>
 	<link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../prettify/prettify.css" rel="stylesheet" type="text/css"></link>
+    <link href="../prettify/bootstrap-prettify.css" rel="stylesheet" type="text/css"></link>
 	<style type="text/css">
 	  body {
 		padding-top: 60px;
@@ -85,19 +87,93 @@
           </div><!--/.well -->
         </div><!--/span-->
         <div id="main_content" class="span9">
-			<h2>WAI-ARIA</h2>
+			<h2>HTML4 and WAI-ARIA</h2>
 			<p class="lead"> It make Rich Internet applications more accessible to people with disabilities. It especially helps with dynamic content and advanced user interface controls developed with Ajax, HTML, JavaScript, and related technologies.<p>
 			
-			<h3>Roles, State and Properties</h3>
+			<h3>No Semantic Meaning</h3>
+			<p>Using DIV tags : <a href="http://airtel.in/" target="_blank">Airtel</a>.</p> 
+			<p>Using HTML tables <a href="http://www.rcom.co.in/Rcom/personal/home/index.html" target="_blank">Reliance Communication</a>. <strong>Never user HTML tables for layout</strong></p>
+			
+			<h3>Example markup</h3>
+			<pre  class="prettyprint lang-html">
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+	&lt;title&gt;Demo Layout&lt;/title&gt;
+	&lt;link href="css/some.css" rel="stylesheet"&gt;
+    &lt;script src="js/some.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;head&gt;
+&lt;body&gt;
+	&lt;div class="header"&gt;
+		&lt;!-- some html code --&gt;
+	&lt;/div&gt;
+	&lt;div class="navigation"&gt;
+		&lt;!-- some html code --&gt;
+	&lt;/div&gt;
+	&lt;div class="main"&gt;
+		&lt;div class="side-navigation"&gt;			
+			&lt;!-- some html code --&gt;
+		&lt;/div&gt;
+		&lt;div class="content"&gt;
+			&lt;!-- some html code --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="footer"&gt;
+		&lt;!-- some html code --&gt;
+	&lt;/div&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;
+			</pre>
+			
+			<h3>Custom Java Script Component</h3>
+			<p>Inaccessible Custom Component : <a href="http://nickperkinslondon.github.io/angular-bootstrap-nav-tree/test/bs2_ng120_test_page.html" target="_blank">Tree Widget</a>.</p> 
+			
+			<h3>AJAX</h3>
+			<p>Dynamic HTML with server side interaction. Autocomplete Example : <a href="https://www.irctc.co.in/" target="_blank">IRCTC</a>.</p> 
+			
+			<h3>Example Markup with ARIA</h3>
+			<pre  class="prettyprint lang-html">
+&lt;!DOCTYPE html &gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Demo Layout&lt;/title&gt;
+	&lt;link href="css/some.css" rel="stylesheet"&gt;
+    &lt;script src="js/some.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;head&gt;
+&lt;body&gt;
+	&lt;div role="banner" class="header"&gt;
+		&lt;!-- some html code --&gt;
+	&lt;/div&gt;
+	&lt;div role="navigation" class="navigation"&gt;
+		&lt;!-- some html code --&gt;
+	&lt;/div&gt;
+	&lt;div role="main" class="main"&gt;
+		&lt;div role="complementary" class="side-navigation"&gt;			
+			&lt;!-- some html code --&gt;
+		&lt;/div&gt;
+		&lt;div role="region" class="content"&gt;
+			&lt;!-- some html code --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div  role="contentinfo" class="footer"&gt;
+		&lt;!-- some html code --&gt;
+	&lt;/div&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;
+			</pre>
+			
+			<h3>Java Script Component ARIA</h3>
 			<h5>Slider</h5>
-			<p>Slider role, state and attributes <a href="../examples/aria/slider-control.html" target="_blank">Demo</a></p>
+			<p>Slider role, state and attributes <a href="../examples/aria/slider-control.html" target="_blank">Demo In IE</a></p>
 			<ul>
 				<li><strong>Role</strong> - Slider</li>
 				<li><strong>State</strong> - Enable or Disable</li>
 				<li><strong>Properties</strong> - Maximum, Minimum and Current level of volume</li>
 			</ul>
 			<h5>Tree</h5>
-			<p>Tree role, state and attributes <a href="../examples/accessible-jqueryui/#goto_tree" target="_blank">Demo</a></p>
+			<p>Tree role, state and attributes <a href="../examples/accessible-jqueryui/#goto_tree" target="_blank">Demo In IE</a></p>
 			<ul>
 				<li><strong>Role</strong> - Tree</li>
 				<li><strong>State</strong> - Hidden</li>
@@ -118,6 +194,13 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.js"></script>
-</body>
+
+    <script src="../prettify/prettify.js" type="text/javascript" ></script>
+	<script>
+		(function(jQuery){	
+			jQuery( document ).ready( function() {
+				prettyPrint();
+			}); 
+		}(jQuery))
+	</script></body>
 </html>

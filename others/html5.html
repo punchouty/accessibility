@@ -90,72 +90,6 @@
 			<h2>HTML 5</h2>
 			<p class="lead"> Semantics in HTML<p>
 			
-			<h3>Old Layout Techniques</h3>
-			<p>Using DIV tags : <a href="http://airtel.in/" target="_blank">Airtel</a></p> 
-			<p>Using HTML tables <a href="http://www.rcom.co.in/Rcom/personal/home/index.html" target="_blank">Reliance Communication</a></p>
-			
-			<h3>Example markup</h3>
-			<pre  class="prettyprint lang-html">
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-&lt;head&gt;
-	&lt;title&gt;Demo Layout&lt;/title&gt;
-	&lt;link href="css/some.css" rel="stylesheet"&gt;
-    &lt;script src="js/some.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;head&gt;
-&lt;body&gt;
-	&lt;div class="header"&gt;
-		&lt;div class="navigation"&gt;
-			&lt;!-- some html code --&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="main"&gt;
-		&lt;div class="side-navigation"&gt;			
-			&lt;!-- some html code --&gt;
-		&lt;/div&gt;
-		&lt;div class="content"&gt;
-			&lt;!-- some html code --&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="footer"&gt;
-		&lt;!-- some html code --&gt;
-	&lt;/div&gt;
-	
-&lt;/body&gt;
-&lt;/html&gt;
-			</pre>			
-			
-			<h3>Markup with ARIA roles</h3>
-			<pre  class="prettyprint lang-html">
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-&lt;head&gt;
-	&lt;title&gt;Demo Layout&lt;/title&gt;
-	&lt;link href="css/some.css" rel="stylesheet"&gt;
-    &lt;script src="js/some.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;head&gt;
-&lt;body&gt;
-	&lt;div class="header"&gt;
-		&lt;div class="navigation"&gt;
-			&lt;!-- some html code --&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="main"&gt;
-		&lt;div class="side-navigation"&gt;			
-			&lt;!-- some html code --&gt;
-		&lt;/div&gt;
-		&lt;div class="content"&gt;
-			&lt;!-- some html code --&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="footer"&gt;
-		&lt;!-- some html code --&gt;
-	&lt;/div&gt;
-	
-&lt;/body&gt;
-&lt;/html&gt;
-			</pre>			
-			
 			<h3>HTML 5 markup</h3>
 			<p>There are new tags that provide meaning to markup - <a href="../examples/html5/semantics.html" target="_blank">Example</a> 
 			</p>
@@ -206,6 +140,68 @@
 
 
 			</pre>
+			
+			<h3>HTML 5 microformats</h3>
+			<p>Collection of vocabularies for extending HTML 
+			</p>
+			<pre  class="prettyprint lang-html">
+&lt;address&gt;
+  &lt;strong&gt;Twitter, Inc.&lt;/strong&gt;&lt;br&gt;
+  795 Folsom Ave, Suite 600&lt;br&gt;
+  San Francisco, CA 94107&lt;br&gt;
+  &lt;abbr title="Phone"&gt;P:&lt;/abbr&gt; (123) 456-7890
+&lt;/address&gt;
+
+&lt;figure&gt;
+	&lt;img src="images/maingraphics.png" alt="Example screen shot" title="main graphics showing screenshot example"&gt;
+	&lt;figcaption&gt;Image with caption.&lt;/figcaption&gt;
+&lt;/figure&gt;
+			</pre>
+			
+			<h3>HTML 5 Tables</h3>
+			<p>New tags for html. <a href="../examples/html5/table.html" target="_blank">Live Example</a>
+			</p>
+			<pre  class="prettyprint lang-html">
+&lt;table&gt;
+  &lt;caption&gt;
+    &lt;strong&gt;Stock Prices&lt;/strong&gt;
+    &lt;details&gt;
+      &lt;summary&gt;Stock prices for 5 most volatile stock today&lt;/summary&gt;
+      &lt;p&gt;Today three stocks has gone up and two have gone down&lt;/p&gt;
+    &lt;/details&gt;
+  &lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Stock Code&lt;/th&gt;
+      &lt;th&gt;Open Price&lt;/th&gt;
+      &lt;th&gt;Close Price&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;2 + &lt;/td&gt;
+      &lt;td&gt;3 +&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Reliance&lt;/td&gt;
+      &lt;td&gt;2010&lt;/td&gt;
+      &lt;td&gt;2100&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ITC&lt;/td&gt;
+      &lt;td&gt;342&lt;/td&gt;
+      &lt;td&gt;368&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Maruti&lt;/td&gt;
+      &lt;td&gt;945&lt;/td&gt;
+      &lt;td&gt;973&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;			</pre>
         </div><!--/span-->
       </div><!--/row-->
 
